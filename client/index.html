@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digimon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="login-page">
+        <img class="wave" src="img/wave.png">
+        <div class="container">
+            <div class="img">
+                <img src="img/bg.svg">
+            </div>
+            <div class="login-content">
+                <form id="login-form">
+                    <img src="img/digimon.gif">
+                    <h2 class="title">Welcome</h2>
+                    <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Email</h5>
+                        <input type="email" class="input" id="email">
+                    </div>
+                    </div>
+                    <div class="input-div pass">
+                    <div class="i"> 
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" class="input" id="password">
+                    </div>
+                    </div>
+                    <input type="submit" class="btn" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="main-page">
+        <navbar>
+            <h1>My Favorite Digimons</h1>
+            <button onclick="logout()">Logout</button>
+        </navbar>
+        <div class="main-container">
+
+        </div>
+        <div onclick="showEditPage()" class="add-btn">
+            <i class="fas fa-plus"></i>
+        </div>
+    </div>
+    <div id="edit-page">
+        <navbar>
+            <h1>My Favorite Digimons</h1>
+            <button onclick="logout()">Logout</button>
+        </navbar>
+        <div class="edit-container">
+            <h1>Add New Digimon</h1>
+            <div class="login-content">
+                <form onsubmit="addDigimon(event)">
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-signature"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Name</h5>
+                            <input type="text" class="input" id="name">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="div">
+                            <h5>level</h5>
+                            <input type="text" class="input" id="level">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="div">
+                            <h5>image Url</h5>
+                            <input type="text" class="input" id="imgUrl">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+        crossorigin="anonymous">
+    </script>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
